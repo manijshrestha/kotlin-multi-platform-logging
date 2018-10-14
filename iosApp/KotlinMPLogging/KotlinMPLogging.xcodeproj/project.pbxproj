@@ -12,7 +12,23 @@
 		48246C972173A75700203A13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48246C952173A75700203A13 /* Main.storyboard */; };
 		48246C992173A75800203A13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48246C982173A75800203A13 /* Assets.xcassets */; };
 		48246C9C2173A75800203A13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48246C9A2173A75800203A13 /* LaunchScreen.storyboard */; };
+		48246CAC2173A9ED00203A13 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48246CAB2173A9ED00203A13 /* common.framework */; };
+		48246CAD2173A9ED00203A13 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48246CAB2173A9ED00203A13 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		48246CAE2173A9ED00203A13 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				48246CAD2173A9ED00203A13 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		48246C8E2173A75700203A13 /* KotlinMPLogging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotlinMPLogging.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,9 @@
 		48246C982173A75800203A13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48246C9B2173A75800203A13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48246C9D2173A75800203A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48246CA42173A92B00203A13 /* common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = common.framework; path = ../../common/build/bin/iOS/main/release/framework/common.framework; sourceTree = "<group>"; };
+		48246CA62173A94100203A13 /* common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = common.framework; path = ../../common/build/bin/iOS/main/debug/framework/common.framework; sourceTree = "<group>"; };
+		48246CAB2173A9ED00203A13 /* common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = common.framework; path = ../../common/build/bin/iOS/main/debug/framework/common.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48246CAC2173A9ED00203A13 /* common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +58,10 @@
 		48246C852173A75700203A13 = {
 			isa = PBXGroup;
 			children = (
+				48246CAB2173A9ED00203A13 /* common.framework */,
 				48246C902173A75700203A13 /* KotlinMPLogging */,
 				48246C8F2173A75700203A13 /* Products */,
+				48246CA32173A92B00203A13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +86,15 @@
 			path = KotlinMPLogging;
 			sourceTree = "<group>";
 		};
+		48246CA32173A92B00203A13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48246CA62173A94100203A13 /* common.framework */,
+				48246CA42173A92B00203A13 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +105,7 @@
 				48246C8A2173A75700203A13 /* Sources */,
 				48246C8B2173A75700203A13 /* Frameworks */,
 				48246C8C2173A75700203A13 /* Resources */,
+				48246CAE2173A9ED00203A13 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +315,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../common/build/bin/iOS/main/debug/framework";
 				INFOPLIST_FILE = KotlinMPLogging/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +334,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../common/build/bin/iOS/main/release/framework";
 				INFOPLIST_FILE = KotlinMPLogging/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
