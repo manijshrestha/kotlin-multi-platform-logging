@@ -7,13 +7,37 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
+    <Button android:id="@+id/red_button"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/red_button"
+            android:layout_margin="16dp"
+            android:textColor="#FF0000"
+            android:onClick="onButtonClick"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button android:id="@+id/green_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/green_button"
+            android:layout_margin="16dp"
+            android:textColor="#00FF00"
+            android:onClick="onButtonClick"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/red_button"/>
+
+    <Button android:id="@+id/blue_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/blue_button"
+            android:layout_margin="16dp"
+            android:textColor="#0000FF"
+            android:onClick="onButtonClick"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/green_button"/>
 
 </android.support.constraint.ConstraintLayout>
