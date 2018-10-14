@@ -7,14 +7,30 @@
 //
 
 import UIKit
+import common
 
 class ViewController: UIViewController {
 
+    let anatlyicsManager = IosAnalyticsManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Report page is viewed
+        anatlyicsManager.report(event: ViewEvent.init(pageName: "Main Page"))
     }
 
-
+    @IBAction func redButtonClicked(_ sender: Any) {
+        anatlyicsManager.report(event: ButtonClickEvent.init(buttonName: "Red"))
+    }
+    
+    @IBAction func greenButtonClicked(_ sender: Any) {
+        anatlyicsManager.report(event: ButtonClickEvent.init(buttonName: "Green"))
+    }
+    
+    @IBAction func blueButtonClicked(_ sender: Any) {
+        anatlyicsManager.report(event: ButtonClickEvent.init(buttonName: "Blue"))
+    }
+    
 }
 
