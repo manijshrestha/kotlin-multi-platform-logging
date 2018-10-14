@@ -14,6 +14,7 @@
 		48246C9C2173A75800203A13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48246C9A2173A75800203A13 /* LaunchScreen.storyboard */; };
 		48246CAC2173A9ED00203A13 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48246CAB2173A9ED00203A13 /* common.framework */; };
 		48246CAD2173A9ED00203A13 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48246CAB2173A9ED00203A13 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48246CB02173ABE200203A13 /* IosAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48246CAF2173ABE200203A13 /* IosAnalyticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		48246CA42173A92B00203A13 /* common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = common.framework; path = ../../common/build/bin/iOS/main/release/framework/common.framework; sourceTree = "<group>"; };
 		48246CA62173A94100203A13 /* common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = common.framework; path = ../../common/build/bin/iOS/main/debug/framework/common.framework; sourceTree = "<group>"; };
 		48246CAB2173A9ED00203A13 /* common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = common.framework; path = ../../common/build/bin/iOS/main/debug/framework/common.framework; sourceTree = "<group>"; };
+		48246CAF2173ABE200203A13 /* IosAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosAnalyticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				48246C982173A75800203A13 /* Assets.xcassets */,
 				48246C9A2173A75800203A13 /* LaunchScreen.storyboard */,
 				48246C9D2173A75800203A13 /* Info.plist */,
+				48246CAF2173ABE200203A13 /* IosAnalyticsManager.swift */,
 			);
 			path = KotlinMPLogging;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				48246C942173A75700203A13 /* ViewController.swift in Sources */,
 				48246C922173A75700203A13 /* AppDelegate.swift in Sources */,
+				48246CB02173ABE200203A13 /* IosAnalyticsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
