@@ -8,7 +8,7 @@ import com.manijshrestha.kotlinmplogging.analytics.ViewEvent
 
 class MainActivity : AppCompatActivity() {
 
-    private val analyticsManager = AndroidAnatlyicsManager()
+    private val analyticsManager = AndroidAnalyticsManager()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
